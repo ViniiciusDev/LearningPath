@@ -1,0 +1,30 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "name": "Mouse",
+            "price": 150.5
+        },
+        {
+            "id": "2",
+            "name": "Teclado",
+            "price": 90.5
+        },
+        {
+            "id": "3",
+            "name": "Monitor",
+            "price": 750.5
+        },
+        {
+            "id": "1772545428430",
+            "name": "Cadeira Gamer",
+            "price": "1.500"
+        },
+        {
+            "id": "1772545450663",
+            "name": "Mesa Gamer",
+            "price": "2.500"
+        }
+    ],
+    "$schema": "./node_modules/json-server/schema.json"
+}
