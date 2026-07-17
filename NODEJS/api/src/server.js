@@ -1,6 +1,6 @@
 import http from "node:http"
 
-const server = http.createServer((request, response) => {
+const server = http.createServer(async (request, response) => {
     // Desestruturar o proprio método
     const { method, url } = request
 
@@ -9,6 +9,17 @@ const server = http.createServer((request, response) => {
     }
 
     if (method === "POST" && url === "/products") {
+        // Creating Buffer
+        const buffers = []
+
+        // Ciclo for com await.
+        for await (const chunk of request) {
+            buffers.push(chunk)
+        }
+        // console.log(buffers)
+        // Um modo "Rustico" para obter o body da nossa requisição. 
+        console.log(Buffer.concat(buffers).toString())
+
         return response.writeHead(201).end("Produto Criado com Successo!")
     }
 
