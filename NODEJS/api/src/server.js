@@ -7,4 +7,5 @@ const server = http.createServer(async (request, response) => {
     await jsonBodyHandler(request, response)
     routeHandler(request, response)
 })
+
 server.listen(3333)

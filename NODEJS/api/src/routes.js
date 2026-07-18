@@ -11,7 +11,7 @@ export const routes = [
         method: "POST",
         path: "/products",
         controller: (request, response) => {
-            return response.writterHead(201).end(JSON.stringify(request.body))
+            return response.writeHead(201).end(JSON.stringify(request.body))
         }
     }
 ]
