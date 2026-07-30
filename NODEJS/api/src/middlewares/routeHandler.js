@@ -4,6 +4,7 @@ import { Database } from "../database.js";
 
 const database = new Database()
 
+
 export function routeHandler(request, response) {
     // Test request.url
     // console.log(request.url)
